@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — NoBanners</title>
+  <style>
+    body { max-width: 680px; margin: 48px auto; padding: 0 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a; }
+    h1 { font-size: 24px; margin-bottom: 4px; }
+    h2 { font-size: 18px; margin-top: 32px; }
+    p, li { color: #374151; }
+    code { background: #f3f4f6; padding: 2px 5px; border-radius: 3px; font-size: 14px; }
+    a { color: #0f766e; }
+    .updated { color: #9ca3af; font-size: 14px; margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — NoBanners</h1>
+  <p class="updated">Last updated: 2026-05-10</p>
+
+  <h2>What data NoBanners collects</h2>
+  <p><strong>None.</strong> NoBanners does not collect, transmit, store externally, or share any data about you or your browsing activity.</p>
+
+  <h2>The rejection counter</h2>
+  <p>NoBanners displays a count of cookie banners it has rejected. This number is stored locally in your browser using <code>chrome.storage.local</code>. It never leaves your device. It is not synced, not transmitted, and not accessible to anyone other than you.</p>
+
+  <h2>Network requests</h2>
+  <p>NoBanners makes zero network requests at runtime. All CMP detection rules are bundled inside the extension package. You can verify this by opening DevTools → Network tab — no requests from NoBanners will appear.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><code>storage</code> — used to store your rejection count and enabled/disabled preference locally.</li>
+    <li><code>activeTab</code> — used to read the current tab's URL when you click the "Report it" button in the popup, so the domain can be pre-filled in the GitHub issue form. This only runs when you explicitly click the button.</li>
+    <li><code>host_permissions: &lt;all_urls&gt;</code> — required to automatically detect and interact with cookie consent banners on every website you visit, without requiring manual activation.</li>
+  </ul>
+
+  <h2>Third-party services</h2>
+  <p>NoBanners does not integrate with any third-party analytics, crash reporting, or telemetry services.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be published here and the extension version number will be incremented.</p>
+
+  <h2>Contact</h2>
+  <p>Open an issue at <a href="https://github.com/nobanners/nobanners/issues">github.com/nobanners/nobanners</a>.</p>
+</body>
+</html>
