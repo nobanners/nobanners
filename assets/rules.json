@@ -1,0 +1,95 @@
+{
+  "format_version": "nobanners-1.0",
+  "rules": [
+    {
+      "name": "OneTrust",
+      "detectCMP": [{ "exists": "#onetrust-banner-sdk" }],
+      "detectPopup": [{ "exists": "#onetrust-banner-sdk" }],
+      "prehideSelectors": ["#onetrust-consent-sdk", "#onetrust-banner-sdk"],
+      "optOut": [
+        { "click": "#onetrust-reject-all-handler" },
+        { "click": ".ot-pc-refuse-all-handler", "optional": true },
+        { "click": ".onetrust-reject-all-handler", "optional": true }
+      ],
+      "fallbackHide": true
+    },
+    {
+      "name": "Cookiebot",
+      "detectCMP": [{ "exists": "#CybotCookiebotDialog" }],
+      "detectPopup": [{ "exists": "#CybotCookiebotDialog" }],
+      "prehideSelectors": ["#CybotCookiebotDialog", "#CybotCookiebotDialogBodyUnderlay"],
+      "optOut": [
+        { "click": "#CybotCookiebotDialogBodyButtonDecline" }
+      ],
+      "fallbackHide": true
+    },
+    {
+      "name": "CookieYes",
+      "detectCMP": [{ "exists": ".cky-consent-container" }],
+      "detectPopup": [{ "exists": ".cky-consent-container" }],
+      "prehideSelectors": [".cky-consent-container", ".cky-overlay"],
+      "optOut": [
+        { "click": ".cky-btn-reject" },
+        { "click": "[data-cky-tag='reject-button']", "optional": true }
+      ],
+      "fallbackHide": true
+    },
+    {
+      "name": "CookieControl",
+      "detectCMP": [{ "exists": "#ccc" }],
+      "detectPopup": [{ "exists": "#ccc-notify" }],
+      "prehideSelectors": ["#ccc"],
+      "optOut": [
+        { "click": "#ccc-reject-settings" },
+        { "click": ".ccc-reject-settings", "optional": true }
+      ],
+      "fallbackHide": true
+    },
+    {
+      "name": "TrustArc",
+      "detectCMP": [{ "exists": "#truste-consent-track" }],
+      "detectPopup": [{ "exists": "#truste-consent-track" }],
+      "prehideSelectors": ["#truste-consent-track", "#truste-show-consent"],
+      "optOut": [
+        { "click": ".pdynamicbutton .call" },
+        { "click": "#truste-consent-required", "optional": true }
+      ],
+      "allFrames": true,
+      "fallbackHide": true
+    },
+    {
+      "name": "Usercentrics",
+      "detectCMP": [{ "exists": "[data-testid='uc-banner']" }],
+      "detectPopup": [{ "exists": "[data-testid='uc-banner']" }],
+      "prehideSelectors": ["[data-testid='uc-banner']"],
+      "optOut": [
+        { "click": "[data-testid='uc-deny-all']" },
+        { "click": "[data-testid='uc-button-deny']", "optional": true }
+      ],
+      "shadowRoot": true,
+      "fallbackHide": true
+    },
+    {
+      "name": "Quantcast",
+      "detectCMP": [{ "exists": "#qc-cmp2-container" }],
+      "detectPopup": [{ "exists": "#qc-cmp2-container" }],
+      "prehideSelectors": ["#qc-cmp2-container", "#qc-cmp2-ui"],
+      "optOut": [
+        { "click": ".qc-cmp2-summary-buttons button:first-child" },
+        { "click": "[mode='secondary']", "optional": true }
+      ],
+      "fallbackHide": true
+    },
+    {
+      "name": "Didomi",
+      "detectCMP": [{ "exists": "#didomi-host" }],
+      "detectPopup": [{ "exists": "#didomi-popup" }],
+      "prehideSelectors": ["#didomi-host", "#didomi-popup"],
+      "optOut": [
+        { "click": "#didomi-notice-disagree-button" },
+        { "click": ".didomi-continue-without-agreeing", "optional": true }
+      ],
+      "fallbackHide": true
+    }
+  ]
+}

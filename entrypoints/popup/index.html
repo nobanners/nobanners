@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoBanners</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="/icons/icon-48.png" alt="" class="logo" />
+      <span class="brand">NoBanners</span>
+    </header>
+
+    <main>
+      <div class="counter-block">
+        <span class="counter-number" id="counter">–</span>
+        <span class="counter-label">cookie banners rejected</span>
+        <span class="counter-sublabel">stored locally · nothing sent anywhere</span>
+      </div>
+
+      <div class="toggle-row">
+        <span class="toggle-label">Extension active</span>
+        <label class="toggle" aria-label="Enable or disable NoBanners">
+          <input type="checkbox" id="enabled-toggle" checked />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <button class="report-btn" id="report-btn">
+        Found a site this didn't handle? Report it →
+      </button>
+    </main>
+
+    <footer>
+      <div class="contributors" id="contributors"></div>
+      <a class="github-link" href="https://github.com/nobanners/nobanners" target="_blank" rel="noopener">
+        View on GitHub
+      </a>
+    </footer>
+
+    <script type="module" src="main.ts"></script>
+  </body>
+</html>

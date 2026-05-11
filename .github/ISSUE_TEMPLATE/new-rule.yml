@@ -1,0 +1,39 @@
+name: "✨ New CMP rule request"
+description: "Request support for a consent management platform not yet covered"
+labels: ["new-rule"]
+body:
+  - type: input
+    id: cmp_name
+    attributes:
+      label: CMP name
+      placeholder: "e.g. Termly"
+    validations:
+      required: true
+
+  - type: input
+    id: example_site
+    attributes:
+      label: Example site using this CMP
+      placeholder: "https://example.com"
+    validations:
+      required: true
+
+  - type: input
+    id: detect_selector
+    attributes:
+      label: Presence selector (how to detect this CMP is on the page)
+      description: "Open DevTools → Elements, find a unique ID or class on the banner container"
+      placeholder: "#my-cmp-banner"
+
+  - type: input
+    id: reject_selector
+    attributes:
+      label: Reject button CSS selector
+      description: "Right-click the reject button → Inspect, copy the selector"
+      placeholder: "#my-cmp-reject-btn"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: "Shadow DOM? iFrame? Anything unusual about how this banner works?"

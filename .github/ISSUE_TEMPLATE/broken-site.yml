@@ -1,0 +1,44 @@
+name: "🔴 Broken site — banner not handled"
+description: "Report a site where NoBanners didn't reject the cookie banner"
+labels: ["broken-site"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Site URL
+      placeholder: "https://example.com"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: what_happened
+    attributes:
+      label: What happened?
+      options:
+        - Banner still showing after page load
+        - Banner was hidden but not rejected (I can tell from network requests)
+        - Site broke after NoBanners ran
+        - Cookies were accepted instead of rejected
+    validations:
+      required: true
+
+  - type: input
+    id: cmp
+    attributes:
+      label: CMP name (if known)
+      description: "e.g. OneTrust, Cookiebot — check the browser network tab for clues"
+      placeholder: "Not sure"
+
+  - type: input
+    id: version
+    attributes:
+      label: NoBanners version + browser
+      placeholder: "e.g. 1.0.0, Chrome 124"
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: "CSS selector of the reject button if you found it in DevTools, screenshots, etc."

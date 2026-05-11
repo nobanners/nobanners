@@ -1,0 +1,28 @@
+{
+  "name": "nobanners",
+  "version": "1.0.0",
+  "description": "Actually clicks reject. Zero telemetry. Open source.",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "npm run contributors && wxt build",
+    "build:firefox": "npm run contributors && wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "contributors": "npx tsx scripts/fetch-contributors.ts",
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "postinstall": "wxt prepare"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@vitest/browser": "^1.6.0",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.0",
+    "vite": "^6.4.2",
+    "vitest": "^1.6.0",
+    "wxt": "^0.20.25"
+  }
+}
